@@ -1,8 +1,15 @@
-// Exercise 2: Set It Up
-	// write a class component
-	// make it a div with a class name of Likes
-	// write a span and a button element inside
-	// export default the component!
+import React, { Components } from 'react';
+
+class Likes extends Component {
+  render() {
+    return (
+      <div className="Likes">
+        <span>12 likes</span>
+        <button>Like this</button>
+      </div>
+    );
+  }
+}
 
 // Exercise 3: Prop It Up
 // Likes should take in number of likes as a prop and display it.
@@ -18,4 +25,4 @@
 	 // increase or decrease the likes based on whether button click is like/ unlike
 	 // hint: take the total likes as a prop, and convert it to state
 
-import React from 'react';
+export default Likes;

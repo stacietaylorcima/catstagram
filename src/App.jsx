@@ -1,9 +1,18 @@
-// Exercise 2: Set It Up
-	// write a class component
-	// make it a div with a class name of App
-	// import Header and Homepage
-	// include them inside of App
-	// export the App component!
+import React, { Component } from 'react';
+import Header from './components/Header.jsx';
+import HomePage from './pages/HomePage.jsx';
+
+class App extends Component {
+  render() {
+    return (
+      <div className="App">
+        <Header />
+        <Homepage />
+        <div>Hello again</div>
+      </div>
+    );
+  }
+}
 
 // Exercise 6: Routing
 // Allow your user to route to different pages!
@@ -13,7 +22,5 @@
 	// set up BrowserRouter
 	// set up Route to with paths to each page (hint: HomePage should "/") and with the appropriate component
 
-import React from 'react';
-import Header from './components/Header.jsx';
-import HomePage from './pages/HomePage.jsx';
 
+export default App;
