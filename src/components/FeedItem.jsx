@@ -3,18 +3,17 @@ import Likes from './Likes.jsx';
 
 class FeedItem extends Component {
   render (){
+    const { imagePost } = this.props
+    const {id, title, url, likes, userLiked} = imagePost
+
     return (
       <div className="FeedItem">
-        <img className="Image" src="" />
-        <Likes />
+        <img className="Image" src={imagePost.url} />
+        {imagePost.title}
+        <Likes likes={likes} userLiked={userLiked}/>
       </div>
     );
   }
 }
 
-// Exercise 3: Prop It Up
-	// pass in props as params to the component
-	// destructure what you need from the props
-	// Hint: what do you need in order to get the image to display?
-	// Hint: what do you need in order to get likes to display in the Likes component?
 export default FeedItem;

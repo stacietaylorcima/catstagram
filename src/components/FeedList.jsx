@@ -3,16 +3,18 @@ import FeedItem from './FeedItem.jsx';
 
 class FeedList extends Component {
   render() {
+    const {photos} = this.props
+    // map over the photos
+    const images = photos.map((image, i) =>
+      <FeedItem key={i} imagePost={image} />
+    )
+
     return (
       <div className="FeedList">
-        <FeedItem />
+        {images}
       </div>
     );
   }
 }
 
-// Exercise 3: Prop It Up
-	// FeedList should accept props as params
-	// destructure photos from props
-	// iterate over the data and map each photo data to a FeedItem
 export default FeedList;
