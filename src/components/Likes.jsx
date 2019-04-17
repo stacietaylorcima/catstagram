@@ -9,8 +9,8 @@ class Likes extends Component {
   }
 
   handleClick = () => {
-    this.setState(function(prevState) {
-      return {isLiked: !prevState.isLiked}
+    this.setState ({
+      isLiked: !this.state.isLiked
     })
   }
 
